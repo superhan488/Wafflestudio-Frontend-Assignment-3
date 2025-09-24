@@ -33,7 +33,7 @@ function addRandomTile(board: Board): Board {
   return newBoard;
 }
 
-// Updated slide to correctly track score
+
 function slide(row: number[], addScore: (points: number) => void): number[] {
   const arr = row.filter((val) => val !== 0);
   const result: number[] = [];
@@ -49,7 +49,7 @@ function slide(row: number[], addScore: (points: number) => void): number[] {
       const merged = arr[i] * 2;
       result.push(merged);
       addScore(merged*0.5);
-      skip = true; // skip next tile
+      skip = true; 
     } else {
       result.push(arr[i]);
     }
